@@ -50,7 +50,7 @@ while True:
     # Filtrar cambios bruscos (evitar parpadeo)
     current_time = time.time()
     if finger_count != prev_fingers and (current_time - last_update_time) > 0.5:  # 0.5s de delay
-        print(f"Dedos detectados: {finger_count}")  # 👈 Salida en consola
+        print(f"Dedos detectados: {finger_count}") 
         arduino.write(str(finger_count).encode())
         prev_fingers = finger_count
         last_update_time = current_time
